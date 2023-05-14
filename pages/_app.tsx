@@ -1,13 +1,16 @@
-import React from "react";
+import type { AppProps } from "next/app"
+import { ThemeProvider } from "next-themes"
+import ReactBricksApp from "../components/ReactBricksApp"
 
-import '../css/global.css'
+import "../css/global.css"
 
-function App() {
-    return ( 
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-        </h1>
-    );
+const MyApp = (props: AppProps) => {
+  return (
+    <ThemeProvider attribute='class' storageKey='color-mode' enableSystem={false}
+      defaultTheme="light">
+      <ReactBricksApp {...props}></ReactBricksApp>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default MyApp
