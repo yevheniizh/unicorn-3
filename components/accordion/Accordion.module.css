@@ -1,0 +1,40 @@
+.root {
+  width: 245px;
+  height: auto;
+  min-height: 36px;
+}
+
+.item .header .icon {
+  font-size: 23px;
+}
+
+.imte .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item .title {
+  width: 192px;
+  height: 19px;
+  margin: 2px 0 0 15px;
+  font-size: 14px;
+}
+
+.item.expanded .header .icon {
+  transform: rotate( 90deg );
+}
+
+.item .body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.item .body > div {
+  overflow: hidden;
+}
+
+.item.expanded .body {
+  grid-template-rows: 1fr;
+}
