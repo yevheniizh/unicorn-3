@@ -4,7 +4,7 @@ import React from 'react';
 export const AccordionBody = ( { className, children, ...rest }: JSX.IntrinsicElements['div'] ) => (
   <div
     className={classnames(
-      'grid grid-rows-collapsed transition-all duration-500',
+      'grid grid-rows-collapsed transition-all duration-500 pl-10',
       'group-[.expanded]/accordion:grid-rows-expanded',
       className,
       )}

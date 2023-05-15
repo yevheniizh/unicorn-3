@@ -8,7 +8,8 @@ export type TAccordionHeaderProps = {
 export const AccordionHeader = ( { className, title, ...rest }: TAccordionHeaderProps ) => (
   <div
     className={classnames( 
-      'flex justify-start items-center gap-2 cursor-pointer border-2 rounded border-transparent hover:border-teal-500 active:hover:bg-teal-100',
+      'flex justify-start items-center gap-2 cursor-pointer border-2 rounded border-transparent hover:border-zinc-500 active:hover:bg-zinc-200',
+      'group-[.expanded]/accordion:bg-zinc-100',
       className,
     )}
     {...rest}
