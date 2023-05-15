@@ -1,12 +1,16 @@
-import classnames from 'classnames';
 import React from 'react';
 
-import styles from './Accordion.module.css';
+import { AccordionBody } from './AccordionBody';
+import { AccordionHeader } from './AccordionHeader';
+import { AccordionWrapper, TAccordionWrapperProps } from './AccordionWrapper';
 
-/**
- * Displays Base According Component
- * @category Components
- */
-export const Accordion = ( { className, ...rest }: JSX.IntrinsicElements['ul'] ) => (
-  <ul className={classnames( styles.root, className )} {...rest} />
+type TAccordionProps = {
+  title: string;
+} & TAccordionWrapperProps;
+
+export const Accordion = ( { children, title, ...rest }: TAccordionProps ) => (
+  <AccordionWrapper {...rest}>
+    <AccordionHeader title={title} />
+    <AccordionBody>{children}</AccordionBody>
+  </AccordionWrapper>
 );

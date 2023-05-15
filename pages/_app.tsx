@@ -3,7 +3,7 @@ import { ThemeProvider } from "next-themes"
 import ReactBricksApp from "../components/ReactBricksApp"
 
 import "../css/global.css"
-import { Accordion, AccordionItem } from "../components/accordion"
+import { Accordion, AccordionContainer } from "../components/accordion"
 
 // const MyApp = (props: AppProps) => {
 //   return (
@@ -16,19 +16,19 @@ import { Accordion, AccordionItem } from "../components/accordion"
 
 const MyApp = () => {
   return (
-    <Accordion>
-      <AccordionItem title={"Foo"}>
+    <AccordionContainer>
+      <Accordion title={"Foo"}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, temporibus! Delectus eos quos tenetur error.
-      </AccordionItem>
+      </Accordion>
 
-      <AccordionItem title={"Bar"}>
+      <Accordion title={"Bar"}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, temporibus! Delectus eos quos tenetur error.
-      </AccordionItem>
+      </Accordion>
 
-      <AccordionItem title={"Baz"}>
+      <Accordion title={"Baz"}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, temporibus! Delectus eos quos tenetur error.
-      </AccordionItem>
-    </Accordion>
+      </Accordion>
+    </AccordionContainer>
   )
 }
 
