@@ -3,7 +3,6 @@ const config: StorybookConfig = {
   stories: [
     '../pages/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../components/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    // '../react-bricks/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
   addons: [
     "@storybook/addon-links",
