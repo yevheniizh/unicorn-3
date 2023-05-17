@@ -3,19 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "tinacms dev -c \"next dev\"",
+    "build": "tinacms build && \"next build\"",
+    "start": "tinacms build && \"next start\"",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@tinacms/cli": "^1.5.12",
     "next": "^13.4.2",
     "next-themes": "^0.2.1",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tinacms": "^1.5.5"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.11",
