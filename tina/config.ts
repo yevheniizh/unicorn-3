@@ -44,6 +44,47 @@ export default defineConfig({
           router: ({ document }) => `/demo/blog/${document._sys.filename}`,
         },
       },
+
+      {
+        name: "home",
+        label: "Global",
+        path: "content",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "object",
+            list: true,
+            name: "accordions",
+            label: "Accordion container",
+            ui: {
+              visualSelector: true,
+            },
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "rich-text",
+                name: "description",
+                label: "Description",
+                required: true,
+                description: 'Description',
+                isBody: true,
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 });
