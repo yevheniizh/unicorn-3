@@ -1,22 +1,45 @@
-# React Bricks starter with Next.js
+# Test project based on Next.js + TinaCMS
 
-Kick-start your project with this boilerplate for a complete Next.js website based on [React Bricks](https://reactbricks.com), with both the front-end and admin dashboard.
++ Next.js
++ TinaCMS
++ TailwindCSS
++ Storybook + Chromatic
 
-## 🚀 Quick start
+## 🚀 Notes
 
-We suggest that you use the CLI and choose this starter.  
-In this way you will have the credentials already set up in a `.env.local` file:
-
-```bash
-npx create-reactbricks-app
-```
-
-Otherwise you can directly clone this repo:
+To run on port 3000
 
 ```bash
-git clone https://github.com/reactbricks/nextjs-starter-reactbricks your-project
+yarn dev
 ```
 
-## 📖 Documentation
+Get the build 
 
-Please, read our documentation at [Reactbricks.com](https://reactbricks.com).
+```bash
+yarn build
+```
+
+Get the build + run
+
+```bash
+yarn start
+```
+
+
+Run Storybook locally
+
+```bash
+yarn storybook
+```
+
+Get the Storybook build
+
+```bash
+yarn storybook
+```
+
+Publish Storybook build to Chromatic
+
+```bash
+yarn chromatic
+```
