@@ -9,10 +9,7 @@ const BlogPage = (props) => {
     query: props.query,
     variables: props.variables,
     data: props.data,
-  })
-
-  console.log('XXX', props);
-  
+  })  
 
   return (
     <div
