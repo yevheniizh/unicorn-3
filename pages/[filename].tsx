@@ -2,6 +2,7 @@ import { useTina } from 'tinacms/dist/react'
 import { TinaMarkdown } from 'tinacms/dist/rich-text'
 import client from '../tina/__generated__/client'
 import { Accordion, AccordionContainer } from '../components/accordion'
+import { Card } from '../components/card'
 
 const BlogPage = (props) => {
   const { data } = useTina({
@@ -9,6 +10,9 @@ const BlogPage = (props) => {
     variables: props.variables,
     data: props.data,
   })
+
+  console.log('XXX', props);
+  
 
   return (
     <div
@@ -19,6 +23,20 @@ const BlogPage = (props) => {
       <h1 className="text-3xl m-8 text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         {data.home?.title}
       </h1>
+
+      {props.data?.home?.cards.length && (
+        props.data?.home?.cards
+          .map( ( {date, title, font, href, image} ) => (
+            <Card
+              key={title}
+              date={date}
+              title={title}
+              font={font}
+              href={href}
+              image={image}
+            />)
+          )
+      )}
 
       {props.data?.home?.accordions.length && (
         <AccordionContainer>

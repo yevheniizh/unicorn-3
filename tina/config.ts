@@ -83,6 +83,52 @@ export default defineConfig({
               },
             ],
           },
+          {
+            type: "object",
+            list: true,
+            name: "cards",
+            label: "Cards",
+            ui: {
+              visualSelector: true,
+            },
+            fields: [
+              {
+                type: "image",
+                name: "image",
+                label: "Image",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "datetime",
+                name: "date",
+                label: "Date",
+                required: true,
+              },
+              {
+                type: "boolean",
+                name: "minimized",
+                label: "Minimized",
+              },
+              {
+                type: "string",
+                name: "font",
+                label: "Font",
+              },
+              {
+                type: "string",
+                name: "href",
+                label: "Href",
+                required: true,
+              },
+            ],
+          },
         ],
       },
     ],

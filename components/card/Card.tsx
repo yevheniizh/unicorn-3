@@ -8,7 +8,7 @@ import { RenderIf } from '../RenderIf';
 import { StaticImageData } from 'next/image';
 
 type TCardProps = {
-  showImage?: boolean;
+  minimized?: boolean;
   href: string;
   title: string;
   image: string | StaticImageData;
@@ -16,9 +16,9 @@ type TCardProps = {
   & Pick<TCardTitleProps, 'font'>
   & TCardWrapperProps;
 
-export const Card = ( { title, image, font, date, showImage = true, ...rest }: TCardProps ) => (
+export const Card = ( { title, image, font, date, minimized = false, ...rest }: TCardProps ) => (
   <CardWrapper {...rest}>
-    <RenderIf is={showImage}>
+    <RenderIf is={!minimized}>
       <CardImage src={`${image}`} />
     </RenderIf>
     <CardTitle font={font}>{title}</CardTitle>

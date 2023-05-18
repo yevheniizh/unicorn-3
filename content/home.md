@@ -16,7 +16,15 @@ accordions:
   - title: The third one
     description: |
       Some boring things here...
+cards:
+  - image: /BurgerKing.png
+    title: Burger king is going to open...
+    date: 2023-05-02T21:00:00.000Z
+    font: ''
+    href: '#'
 ---
+
+
 
 
 
